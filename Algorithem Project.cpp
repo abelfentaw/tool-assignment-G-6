@@ -10,6 +10,8 @@ void EmployeeInfo();
 void DisplayEmployee();
 void AddEmpAtTheBeginning();
 void AddEmpAttTheEnd();
+void SearchEmployee();
+void ShoesInfo();
 struct dllstud
 {
     int age;
@@ -219,3 +221,72 @@ temp->prv=y;
     }
     EmployeeInfo();
 }
+void SearchEmployee()
+{
+	int choice;
+	int age;
+		cout<<"1.use employee name to search\n";
+		cout<<"2.use employee age to search\n";
+		cout<<"3.back to previous\n";
+	cin>>choice;
+	system("cls");
+	if (choice==1)
+		{
+			char name[20];
+        dllstud *temp = start;
+        cout<<"enter employee name to search record:\n";
+		cin>>name;
+		cout<<endl;
+        while (temp != NULL)
+        {
+            if (strcmp(name,temp->name) == 0)
+            {
+   	        cout<<"your employee name is : "<< temp->name<<endl;
+        	cout<<"your employee age is : "<< temp->age<<endl;
+        		cout<<"your employee job is : "<< temp->job<<endl;
+        		cout<<endl;
+            }
+            temp = temp->nxt;
+        }
+    }
+	if (choice==2)
+	{
+			cout<<"enter employee age to search record:\n";
+		cin>>age;
+		cout<<endl;
+	dllstud *temp=start;
+	while(temp->nxt!=NULL)
+	{
+		if(temp->age==age)
+		{
+		cout<<"your employee name is : "<< temp->name<<endl;
+        	cout<<"your employee age is : "<< temp->age<<endl;
+        		cout<<"your employee job is : "<< temp->job<<endl;
+        		cout<<endl;
+		}
+		temp=temp->nxt;
+	}
+	}
+		if (choice==3)
+		EmployeeInfo();
+	}
+	void ShoesInfo()
+{
+    int sh;
+    cout<<"1.Add Shoes To Store "<<endl;
+    cout<<"2.Remove Shoes From Store"<<endl;
+    cout<<"3.To display shoes list"<<endl;
+    cout<<"4.To Search shoes from store"<<endl;
+    cout<<"5.Back To Main"<<endl;
+    cin>>sh;
+    system("CLS");
+    switch (sh)
+    {
+    case 1:
+          int sho;
+    cout<<"1.Add Shoes At The Beginning Of The List"<<endl;
+    cout<<"2.Add Shoes At The Middle Of The List"<<endl;
+    cout<<"3.Add Shoes At The End Of The List"<<endl;
+    cout<<"4.Back To Previous"<<endl;
+    cin>>sho;
+    system("CLS");
