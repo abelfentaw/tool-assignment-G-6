@@ -10,10 +10,10 @@ void EmployeeInfo();
 void DisplayEmployee();
 void AddEmpAtTheBeginning();
 void AddEmpAttTheEnd();
+void ShoesInfo();
 void DeleteEmpAtTheBeginning();
 void DeleteEmpAtTheEnd();
 void SearchEmployee();
-void ShoesInfo();
 struct dllstud
 {
     int age;
@@ -325,3 +325,32 @@ void DeleteEmpAtTheEnd()
     cout<<"4.Back To Previous"<<endl;
     cin>>sho;
     system("CLS");
+    switch (sho)
+    {
+	case 1:
+	{
+    dllstud *temp;
+    temp=new dllstud;
+    cout<<"Enter Name \n";
+    cin>>temp->na;
+    system("CLS");
+    cout<<"Enter size\n";
+    cin>>temp->size;
+    system("CLS");
+    cout<<"Enter brand\n";
+    cin>>temp->brand;
+    system("CLS");
+    temp->nxt=NULL;
+    temp->prv=NULL;
+    if(start==NULL||last==NULL)
+    {
+        start=temp;
+        last=temp;
+    }
+    else
+    {
+        temp->nxt=start;
+        start->prv=temp;
+        start=temp;
+    }
+}
