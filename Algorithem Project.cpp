@@ -249,6 +249,57 @@ void AddEmpAttTheEnd()
     }
     EmployeeInfo();
 }
+	void ShoesInfo()
+{
+    int sh;
+    cout<<"1.Add Shoes To Store"<<endl;
+    cout<<"2.Remove Shoes From Store"<<endl;
+    cout<<"3.To display shoes list"<<endl;
+    cout<<"4.To Search shoes from store"<<endl;
+    cout<<"5.Back To Main"<<endl;
+    cin>>sh;
+    system("CLS");
+    switch (sh)
+    {
+    case 1:
+          int sho;
+    cout<<"1.Add Shoes At The Beginning Of The List"<<endl;
+    cout<<"2.Add Shoes At The Middle Of The List"<<endl;
+    cout<<"3.Add Shoes At The End Of The List"<<endl;
+    cout<<"4.Back To Previous"<<endl;
+    cin>>sho;
+    system("CLS");
+    switch (sho)
+    {
+	case 1:
+	{
+    dllstud *temp;
+    temp=new dllstud;
+    cout<<"Enter Name \n";
+    cin>>temp->na;
+    system("CLS");
+    cout<<"Enter size\n";
+    cin>>temp->size;
+    system("CLS");
+    cout<<"Enter brand\n";
+    cin>>temp->brand;
+    system("CLS");
+    temp->nxt=NULL;
+    temp->prv=NULL;
+    if(start==NULL||last==NULL)
+    {
+        start=temp;
+        last=temp;
+    }
+    else
+    {
+        temp->nxt=start;
+        start->prv=temp;
+        start=temp;
+    }
+}
+
+
 void SearchEmployee()
 {
 	int choice;
@@ -330,53 +381,4 @@ void DeleteEmpAtTheEnd()
     cout<<temp->name<<" is succesfully deleted!\n";
 	}
     EmployeeInfo();
-}
-	void ShoesInfo()
-{
-    int sh;
-    cout<<"1.Add Shoes To Store"<<endl;
-    cout<<"2.Remove Shoes From Store"<<endl;
-    cout<<"3.To display shoes list"<<endl;
-    cout<<"4.To Search shoes from store"<<endl;
-    cout<<"5.Back To Main"<<endl;
-    cin>>sh;
-    system("CLS");
-    switch (sh)
-    {
-    case 1:
-          int sho;
-    cout<<"1.Add Shoes At The Beginning Of The List"<<endl;
-    cout<<"2.Add Shoes At The Middle Of The List"<<endl;
-    cout<<"3.Add Shoes At The End Of The List"<<endl;
-    cout<<"4.Back To Previous"<<endl;
-    cin>>sho;
-    system("CLS");
-    switch (sho)
-    {
-	case 1:
-	{
-    dllstud *temp;
-    temp=new dllstud;
-    cout<<"Enter Name \n";
-    cin>>temp->na;
-    system("CLS");
-    cout<<"Enter size\n";
-    cin>>temp->size;
-    system("CLS");
-    cout<<"Enter brand\n";
-    cin>>temp->brand;
-    system("CLS");
-    temp->nxt=NULL;
-    temp->prv=NULL;
-    if(start==NULL||last==NULL)
-    {
-        start=temp;
-        last=temp;
-    }
-    else
-    {
-        temp->nxt=start;
-        start->prv=temp;
-        start=temp;
-    }
 }
