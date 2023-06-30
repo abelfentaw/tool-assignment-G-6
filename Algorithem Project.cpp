@@ -308,7 +308,7 @@ void DeleteEmpAtTheEnd()
 	void ShoesInfo()
 {
     int sh;
-    cout<<"1.Add Shoes To Store "<<endl;
+    cout<<"1.Add Shoes To Store"<<endl;
     cout<<"2.Remove Shoes From Store"<<endl;
     cout<<"3.To display shoes list"<<endl;
     cout<<"4.To Search shoes from store"<<endl;
