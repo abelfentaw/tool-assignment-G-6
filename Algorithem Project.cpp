@@ -32,7 +32,7 @@ void main2()//abel
      system("Color B");
 cout<<"1. Employee Information\n";
 cout<<"2. Shoes Information\n";
-cout<<"3. Group Members Of The Project\n";
+cout<<"3. Group Members Of The Project \n";
     cout<<"Insert Your Choice \n";
     cin>>ch;
     system("CLS");
