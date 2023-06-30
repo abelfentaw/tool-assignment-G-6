@@ -8,6 +8,8 @@
 using namespace std;
 void EmployeeInfo();
 void DisplayEmployee();
+void AddEmpAtTheBeginning();
+void AddEmpAttTheEnd();
 struct dllstud
 {
     int age;
@@ -135,4 +137,85 @@ void DisplayEmployee()
             temp2=temp2->nxt;
         }
     }
+}
+void AddEmpAtTheBeginning()
+{
+    dllstud *temp;
+    temp=new dllstud;
+    cout<<"Enter Name \n";
+    cin>>temp->name;
+    system("CLS");
+    cout<<"Enter Age\n";
+    cin>>temp->age;
+    system("CLS");
+    cout<<"Enter Job\n";
+    cin>>temp->job;
+    system("CLS");
+    temp->nxt=NULL;
+    temp->prv=NULL;
+    if(start==NULL||last==NULL)
+    {
+        start=temp;
+        last=temp;
+    }
+    else
+    {
+        temp->nxt=start;
+        start->prv=temp;
+        start=temp;
+    }
+    EmployeeInfo();
+}
+	void AddEmpAtTheMiddle(int key)
+	{
+
+			dllstud *temp=new dllstud;
+	   cout<<"Enter Name \n";
+    cin>>temp->name;
+    system("CLS");
+    cout<<"Enter Age\n";
+    cin>>temp->age;
+    system("CLS");
+    cout<<"Enter Job\n";
+    cin>>temp->job;
+    system("CLS");
+    int c=1;
+    dllstud *x=start,*y;
+    while(c<key)
+	{
+	y=x;
+	x=x->nxt;
+	c++;
+	}
+x->prv=temp;
+temp->nxt=x;
+y->nxt=temp;
+temp->prv=y;
+
+ EmployeeInfo();
+	}
+	void AddEmpAttTheEnd()
+{
+    dllstud *temp;
+    temp=new dllstud;
+    cout<<"Enter Name \n";
+    cin>>temp->name;
+    system("CLS");
+    cout<<"Enter Age\n";
+    cin>>temp->age;
+    system("CLS");
+    cout<<"Enter Job\n";
+    cin>>temp->job;
+    system("CLS");
+    temp->nxt=NULL;
+    temp->prv=NULL;
+    if(start==NULL||last==NULL)
+        start=last=temp;
+    else
+    {
+        last->nxt=temp;
+        temp->prv=last;
+        last=temp;
+    }
+    EmployeeInfo();
 }
