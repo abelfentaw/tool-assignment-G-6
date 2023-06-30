@@ -29,7 +29,7 @@ dllstud *start=NULL,*last=NULL;
 void main2()//abel
 {
     int ch;
-     system("Color B");
+     system("Color B ");
 cout<<"1. Employee Information\n";
 cout<<"2. Shoes Information\n";
 cout<<"3. Group Members Of The Project \n";
