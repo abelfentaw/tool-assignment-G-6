@@ -27,35 +27,7 @@ struct dllstud
 };
 dllstud *start=NULL,*last=NULL;
 
-void main2()//abel
-{
-    int ch;
-     system("Color B ");
-cout<<"1. Employee Information\n";
-cout<<"2. Shoes Information\n";
-cout<<"3. Group Members Of The Project \n";
-    cout<<"Insert Your Choice \n";
-    cin>>ch;
-    system("CLS");
-    switch(ch)
-    {
-  case 1:
-        EmployeeInfo();
-        break;
-   case 2:
-    	ShoesInfo();
-    	break;
-	case 3:
-	    GroupMembers();
-	    break;
-	default:
-	{
-		cout<<"invalid number\n";
-		main2();
-	}
-		break;
-    }
-}
+
 void EmployeeInfo()
 {
     int em;
@@ -123,6 +95,36 @@ case 3:
     	main2();
 }
 }
+void main2()
+{
+    int ch;
+     system("Color B ");
+cout<<"1. Employee Information\n";
+cout<<"2. Shoes Information\n";
+cout<<"3. Group Members Of The Project \n";
+    cout<<"Insert Your Choice \n";
+    cin>>ch;
+    system("CLS");
+    switch(ch)
+    {
+  case 1:
+        EmployeeInfo();
+        break;
+   case 2:
+    	ShoesInfo();
+    	break;
+	case 3:
+	    GroupMembers();
+	    break;
+	default:
+	{
+		cout<<"invalid number\n";
+		main2();
+	}
+		break;
+    }
+}
+
 void AddEmpAttTheEnd()
 {
     dllstud *temp;
