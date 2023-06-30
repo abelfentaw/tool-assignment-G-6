@@ -10,6 +10,8 @@ void EmployeeInfo();
 void DisplayEmployee();
 void AddEmpAtTheBeginning();
 void AddEmpAttTheEnd();
+void DeleteEmpAtTheBeginning();
+void DeleteEmpAtTheEnd();
 void SearchEmployee();
 void ShoesInfo();
 struct dllstud
@@ -270,6 +272,39 @@ void SearchEmployee()
 		if (choice==3)
 		EmployeeInfo();
 	}
+	void DeleteEmpAtTheBeginning()
+{
+
+    dllstud *temp;
+    if (start==NULL)
+        cout<<"List Empty \n";
+    else
+    {
+        temp=start;
+        start=start->nxt;
+        start->prv=NULL;
+        delete temp;
+
+        cout<<temp->name<<" is succesfully deleted!\n";
+
+    }
+    EmployeeInfo();
+}
+void DeleteEmpAtTheEnd()
+{
+    dllstud *temp;
+    if (start==NULL)
+        cout<<"List Empty \n";
+    else
+    {
+        temp=last;
+        last=last->prv;
+       last->nxt=NULL;
+        delete temp;
+    cout<<temp->name<<" is succesfully deleted!\n";
+	}
+    EmployeeInfo();
+}
 	void ShoesInfo()
 {
     int sh;
