@@ -123,7 +123,35 @@ case 3:
     	main2();
 }
 }
-
+void AddEmpAttTheEnd()
+{
+    dllstud *temp;
+    temp=new dllstud;
+    
+    cout<<"Enter Name \n";
+    cin>>temp->name;
+    
+    system("CLS");
+    cout<<"Enter Age\n";
+    cin>>temp->age;
+    system("CLS");
+    cout<<"Enter Job\n";
+    cin>>temp->job;
+    
+    system("CLS");
+    temp->nxt=NULL;
+    temp->prv=NULL;
+    
+    if(start==NULL||last==NULL)
+        start=last=temp;
+    else
+    {
+        last->nxt=temp;
+        temp->prv=last;
+        last=temp;
+    }
+    EmployeeInfo();
+}
 void DisplayEmployee()
 {
     dllstud *temp2;
@@ -143,34 +171,7 @@ void DisplayEmployee()
         }
     }
 }
-void AddEmpAtTheBeginning()
-{
-    dllstud *temp;
-    temp=new dllstud;
-    cout<<"Enter Name \n";
-    cin>>temp->name;
-    system("CLS");
-    cout<<"Enter Age\n";
-    cin>>temp->age;
-    system("CLS");
-    cout<<"Enter Job\n";
-    cin>>temp->job;
-    system("CLS");
-    temp->nxt=NULL;
-    temp->prv=NULL;
-    if(start==NULL||last==NULL)
-    {
-        start=temp;
-        last=temp;
-    }
-    else
-    {
-        temp->nxt=start;
-        start->prv=temp;
-        start=temp;
-    }
-    EmployeeInfo();
-}
+
 void AddEmpAtTheMiddle(int key)
 	{
 
@@ -199,7 +200,7 @@ temp->prv=y;
 
  EmployeeInfo();
 	}
-void AddEmpAttTheEnd()
+	void AddEmpAtTheBeginning()
 {
     dllstud *temp;
     temp=new dllstud;
@@ -215,15 +216,19 @@ void AddEmpAttTheEnd()
     temp->nxt=NULL;
     temp->prv=NULL;
     if(start==NULL||last==NULL)
-        start=last=temp;
+    {
+        start=temp;
+        last=temp;
+    }
     else
     {
-        last->nxt=temp;
-        temp->prv=last;
-        last=temp;
+        temp->nxt=start;
+        start->prv=temp;
+        start=temp;
     }
     EmployeeInfo();
 }
+
 	void AddEmpAttTheEnd()
 {
     dllstud *temp;
