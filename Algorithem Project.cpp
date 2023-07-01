@@ -155,25 +155,7 @@ void AddEmpAttTheEnd()
     }
     EmployeeInfo();
 }
-void DisplayEmployee()
-{
-    dllstud *temp2;
-    if(start==NULL||last==NULL)
-        cout<<"list is empty \n";
-    else
-    {
-        temp2=start;
-        while(temp2!=NULL)
-        {
 
-            cout<<"Your name is "<<temp2->name<<endl;
-         cout<<"Your age is "<<temp2->age<<endl;
-               cout<<"Your job is "<<temp2->job<<endl;
-            cout<<endl;
-            temp2=temp2->nxt;
-        }
-    }
-}
 void SearchEmployee()
 {
 	int choice;
@@ -223,6 +205,25 @@ void SearchEmployee()
 		if (choice==3)
 		EmployeeInfo();
 	}
+	void DisplayEmployee()
+{
+    dllstud *temp2;
+    if(start==NULL||last==NULL)
+        cout<<"list is empty \n";
+    else
+    {
+        temp2=start;
+        while(temp2!=NULL)
+        {
+
+            cout<<"Your name is "<<temp2->name<<endl;
+         cout<<"Your age is "<<temp2->age<<endl;
+               cout<<"Your job is "<<temp2->job<<endl;
+            cout<<endl;
+            temp2=temp2->nxt;
+        }
+    }
+}
 void AddEmpAtTheMiddle(int key)
 	{
 
