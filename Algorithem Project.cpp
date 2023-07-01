@@ -15,6 +15,7 @@ void DeleteEmpAtTheBeginning();
 void DeleteEmpAtTheEnd();
 void SearchEmployee();
 void AddEmpAtTheMiddle(int key)
+void AddShoeAtTheMiddle(int h);
 struct dllstud
 {
     int age;
@@ -306,7 +307,30 @@ temp->prv=y;
     }
 }
 
-
+void AddShoeAtTheMiddle(int hey)
+{
+dllstud *temp=new dllstud;
+    cout<<"Enter Name \n";
+    cin>>temp->na;
+    system("CLS");
+    cout<<"Enter size\n";
+    cin>>temp->size;
+    system("CLS");
+    cout<<"Enter brand\n";
+    cin>>temp->brand;
+    system("CLS");
+    int c=1;
+    dllstud *x=start,*y;
+    while(c<hey)
+	{
+	y=x;
+	x=x->nxt;
+	c++;
+	}
+x->prv=temp;
+temp->nxt=x;
+y->nxt=temp;
+temp->prv=y;
 void SearchEmployee()
 {
 	int choice;
