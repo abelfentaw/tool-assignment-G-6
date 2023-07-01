@@ -446,21 +446,6 @@ void SearchEmployee()
     }
     EmployeeInfo();
 }
-void DeleteEmpAtTheEnd()
-{
-    dllstud *temp;
-    if (start==NULL)
-        cout<<"List Empty \n";
-    else
-    {
-        temp=last;
-        last=last->prv;
-       last->nxt=NULL;
-        delete temp;
-    cout<<temp->name<<" is succesfully deleted!\n";
-	}
-    EmployeeInfo();
-}
 void Loading()
 {
  system("color B");
@@ -483,3 +468,19 @@ cout<<endl;
   cout<<"\t\t\t\t  **************************************\n";
  getch();
 }
+void DeleteEmpAtTheEnd()
+{
+    dllstud *temp;
+    if (start==NULL)
+        cout<<"List Empty \n";
+    else
+    {
+        temp=last;
+        last=last->prv;
+       last->nxt=NULL;
+        delete temp;
+    cout<<temp->name<<" is succesfully deleted!\n";
+	}
+    EmployeeInfo();
+}
+
