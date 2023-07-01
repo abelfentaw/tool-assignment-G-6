@@ -174,7 +174,55 @@ void DisplayEmployee()
         }
     }
 }
-
+void SearchEmployee()
+{
+	int choice;
+	int age;
+		cout<<"1.use employee name to search\n";
+		cout<<"2.use employee age to search\n";
+		cout<<"3.back to previous\n";
+	cin>>choice;
+	system("cls");
+	if (choice==1)
+		{
+			char name[20];
+        dllstud *temp = start;
+        cout<<"enter employee name to search record:\n";
+		cin>>name;
+		cout<<endl;
+        while (temp != NULL)
+        {
+            if (strcmp(name,temp->name) == 0)
+            {
+   	        cout<<"your employee name is : "<< temp->name<<endl;
+        	cout<<"your employee age is : "<< temp->age<<endl;
+        		cout<<"your employee job is : "<< temp->job<<endl;
+        		cout<<endl;
+            }
+            temp = temp->nxt;
+        }
+    }
+	if (choice==2)
+	{
+			cout<<"enter employee age to search record:\n";
+		cin>>age;
+		cout<<endl;
+	dllstud *temp=start;
+	while(temp->nxt!=NULL)
+	{
+		if(temp->age==age)
+		{
+		cout<<"your employee name is : "<< temp->name<<endl;
+        	cout<<"your employee age is : "<< temp->age<<endl;
+        		cout<<"your employee job is : "<< temp->job<<endl;
+        		cout<<endl;
+		}
+		temp=temp->nxt;
+	}
+	}
+		if (choice==3)
+		EmployeeInfo();
+	}
 void AddEmpAtTheMiddle(int key)
 	{
 
