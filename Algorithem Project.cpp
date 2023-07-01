@@ -461,3 +461,25 @@ void DeleteEmpAtTheEnd()
 	}
     EmployeeInfo();
 }
+void Loading()
+{
+ system("color B");
+ cout<<"\n\n\n\t\t\t\t\tPLEASE WAIT WHILE LOADING\n\n";
+ char a=177, b=219;
+ cout<<"\t\t\t\t\t";
+ for (int i=15;i<=40;i++)
+ cout<<a;
+ cout<<"\r";
+ cout<<"\t\t\t\t\t";
+ for (int i=15;i<=40;i++)
+ {
+  cout<<b;
+  for (int j=0;j<=6e7;j++);
+ }
+system("CLS");
+cout<<endl;
+ cout<<"\t\t\t\tWELCOME TO OUR EMPLOYEE MANAGEMENT SYSTEM\n";
+  cout<<"\t\t\t\t     press any key to get the access\n";
+  cout<<"\t\t\t\t  **************************************\n";
+ getch();
+}
